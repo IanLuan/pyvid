@@ -1,2 +1,2 @@
 # pyvid
-Django App for Covid test schedule.
+Web App for scheduling covid tests made with Python/Django and PostgreSQL
