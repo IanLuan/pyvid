@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .forms import CadastroForm, LoginForm
-from django.contrib.auth import views, authenticate, login
+from django.contrib.auth import views, authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
@@ -34,6 +34,11 @@ def login_view(request):
     return render(request, 'login.html', locals())
 
 
-@login_required(login_url="/")
+def logout_view(request):
+    logout(request)
+    return redirect('base:login')
+
+
+@login_required(login_url='/')
 def home_view(request):
     return render(request, 'home.html')

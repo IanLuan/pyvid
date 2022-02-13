@@ -4,8 +4,11 @@
 <title>Pyvid</title>
 </head>
 <body>
-
-<h1>Bem vindo {{ request.user.nome }}</h1>
-
+    <h1>Bem vindo {{ request.user.nome }}</h1>
+    <p>nome: {{ request.user.nome }}</p>
+    <p>cpf: {{ request.user.cpf }}</p>
+    <p>data de nascimento: {{ request.user.data_nascimento }} ({{ request.user.idade }} anos)</p>
+    <a href="{% url 'agendamento:listar_agendamentos' %}">Agendamento</a>
+    <a href="{% url 'base:logout' %}">Sair</a>
 </body>
 </html>

@@ -6,6 +6,7 @@ app_name = 'base'
 urlpatterns = [
     path('', views.login_view, name='login'),
     path('cadastro/', views.cadastro_view, name='cadastro'),
-    path('home/', views.home_view, name='home')
+    path('logout/', views.logout_view, name='logout'),
+    path('home/', views.home_view, name='home'),
 ]
 

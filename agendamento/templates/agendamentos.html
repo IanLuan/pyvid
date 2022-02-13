@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pyvid</title>
+</head>
+<body>
+    <h1>Seus agendamentos</h1>
+    <p><a href="{% url 'agendamento:novo_agendamento' %}">Novo agendamento</a></p>
+
+    {% for agendamento in agendamentos %}
+        <p>{{ agendamento.agendamento.estabelecimento_saude }}</p>
+        <p>{{ agendamento.data }}</p>
+        <p>{{ agendamento.horario }}</p>
+        <br>
+    {% endfor %}
+
+</body>
+</html>
